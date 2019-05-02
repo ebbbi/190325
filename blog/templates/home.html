@@ -1,0 +1,9 @@
+<h1>글 목록을 확인할 수 있는 홈페이지 입니다. </h1><br><br>
+
+<a href="{% url 'new' %}">글 쓰러가기</a>
+{% for post in posts_list %}
+    <h3>{{post.title}}</h3>
+    <p>{{post.pub_date}}</p>
+    <p>{{post.body}}</p>
+    <hr>
+{%endfor%}
